@@ -1,6 +1,7 @@
 
 function App() {
   return (
+
     <div>
   
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -202,8 +203,13 @@ function App() {
     <footer className="py-5 bg-dark">
         <div className="container"><p className="m-0 text-center text-white">Copyright © Your Website 2022</p></div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+    <script src="js/scripts.js"></script>
     </div>
   );
+
+  
 }
 
 export default App;
