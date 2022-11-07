@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Main() {
+export default function Home() {
     return (
         <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
