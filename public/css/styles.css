@@ -4247,6 +4247,7 @@ textarea.form-control-lg {
   .navbar-expand-lg .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
+    font-size: x-large;
   }
   .navbar-expand-lg .navbar-toggler {
     display: none;
