@@ -75,9 +75,6 @@
     scroll-behavior: smooth;
   }
 }
-a {
-  color: black
-}
 * {box-sizing:border-box}
 
 /* Slideshow container */
