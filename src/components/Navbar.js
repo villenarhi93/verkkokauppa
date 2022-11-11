@@ -9,8 +9,12 @@ export default function Navbar() {
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Etusivu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Tietoja</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">
+                        <Link className="nav-link" to="/home">Etusivu</Link>
+                    </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">
+                        <Link className="nav-link" to="/about">Tietoja</Link>
+                    </a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kauppa</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
