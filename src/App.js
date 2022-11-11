@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -10,7 +11,12 @@ function App() {
     <>
     <Navbar />
     <Header />
-    <Home />
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </div>
     <Footer />
     </>
   );
