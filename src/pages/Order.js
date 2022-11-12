@@ -1,4 +1,5 @@
 import React from "react";
+import uuid from "react-uuid";
 
 export default function Order({cart}) {
     let sum = 0;
