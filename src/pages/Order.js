@@ -14,9 +14,15 @@ export default function Order({cart}) {
                             <tr key={uuid()}>
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
+                                <td></td>
                             </tr>
                         )
                     })}
+                    <tr key={uuid()}>
+                        <td></td>
+                        <td>{sum.toFixed(2)}</td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
         </div>      
