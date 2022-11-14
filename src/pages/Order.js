@@ -1,10 +1,14 @@
 import React from "react";
 import uuid from "react-uuid";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Order({cart}) {
     let sum = 0;
 
     return (
+        <>
+    <Navbar />
         <div>
             <h3 className="header">Tuotteet ostoskorissa</h3>
             <table className="table">
@@ -26,6 +30,8 @@ export default function Order({cart}) {
                     </tr>
                 </tbody>
             </table>
-        </div>      
+        </div>   
+    <Footer />   
+        </>
     )
 }
