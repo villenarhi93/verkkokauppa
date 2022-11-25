@@ -1,7 +1,27 @@
-import React from "react";
+import axios from "axios";
+import React, {useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Cart from "./Cart";
 
-export default function Navbar() {
+const url = 'http://localhost:3000';
+
+
+export default function Navbar({url, cart}) {
+
+const [categories, setCategories] = useState([]);
+
+useEffect(() => {
+    console.log(url);
+    axios.get(url + 'products/getcategories.php')
+        .then((response) => {
+            const json = response.data;
+            setCategories(json);
+            console.log(json);
+        }).catch (error => {
+            alert(error.response === undefined ? error : error.response.data.error);
+        })
+}, []
+)
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
@@ -18,20 +38,21 @@ export default function Navbar() {
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kauppa</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">Kaikki tuotteet</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Tuoteryhmä 1</a></li>
-                            <li><a class="dropdown-item" href="#!">Tuoteryhmä 2</a></li>
-                            <li><a class="dropdown-item" href="#!">Tuoteryhmä 3</a></li>
-                            <li><a class="dropdown-item" href="#!">Tuoteryhmä 4</a></li>
-                            <li><a class="dropdown-item" href="#!">Tuoteryhmä 5</a></li>
+                            {categories.map(category => (
+                            <li>
+                                <Link
+                                className="dropdown-item"
+                                to={'/products/' + category.id}>{category.name}
+                                </Link>
+                            </li>
+                            ))}
                         </ul>
                     </li>
                 </ul>
                 <form class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
-                        <Link className="nav-link" to="/cart">Ostoskori</Link>
+                        <Cart cart={cart} />
                         <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
                 </form>
