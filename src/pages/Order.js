@@ -2,10 +2,21 @@ import React, { useState, useEffect, createRef } from "react";
 import uuid from "react-uuid";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import axios from "axios";
+
+const url = 'http://localhost:3000';
 
 export default function Order({cart, removeFromCart, updateAmount}) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
+    const [firstname, setFirstName] = useState('')
+    const [lastname, setLastName] = useState('')
+    const [address, setAddress] = useState('')
+    const [zip, setZip] = useState('')
+    const [city, setCity] = useState('')
+    const [finished, setFinished] = useState([])
+    const [empty, setEmpty] = useState();
+
 
     useEffect(() => {
       for (let i = 0;i<cart.length;i++) {
@@ -54,7 +65,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
 
     return (
     <>
-    
+
     <Navbar />
 
         <div>
