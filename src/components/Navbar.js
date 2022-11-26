@@ -9,6 +9,7 @@ const url = 'http://localhost:3000';
 export default function Navbar({url, cart}) {
 
 const [categories, setCategories] = useState([]);
+const [search, setSearch] = useState('');
 
 useEffect(() => {
     console.log(url);
@@ -26,7 +27,7 @@ useEffect(() => {
 function executeSearch(e) {
     if (e.charCode === 13) {
         e.preventDefault();
-        navigate('/search/' + search);
+        Navigate('/search/' + search);
     }
 }
 
