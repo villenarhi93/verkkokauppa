@@ -27,9 +27,36 @@ export default function Order({cart, removeFromCart, updateAmount}) {
         setInputIndex(index);
     }
 
+    function order(e) {
+        e.preventDefault();
+        
+        const json = JSON.stringify({
+            firstname: firstname,
+            lastname: lastname,
+            address: address,
+            zip: zip,
+            city: city,
+            cart: cart,
+        });
+        axios.post(url + 'order/save.php', json, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type' : 'application/json'
+            }
+        })
+        .then(() => {
+            empty();
+            setFinished(true);
+        }).catch(error => {
+            alert(error.response === undefined ? error : error.response.data.error);
+        })
+    }
+
     return (
-        <>
+    <>
+    
     <Navbar />
+
         <div>
             <h3 className="header">Tuotteet ostoskorissa</h3>
             <table className="table">
@@ -54,8 +81,40 @@ export default function Order({cart, removeFromCart, updateAmount}) {
                     </tr>
                 </tbody>
             </table>
+            {cart.length > 0 &&
+                <>
+                <h3 className="header">Tilaajan tiedot</h3>
+                <form onSubmit={order}>
+                    <div className="form-group">
+                        <label>Etunimi:</label>
+                        <input className="form-control" onChange={e => setFirstName(e.target.value)}/>
+                    </div>
+                    <div className="form-group">
+                        <label>Sukunimi:</label>
+                        <input className="form-control" onChange={e => setLastName(e.target.value)}/>
+                    </div>
+                    <div className="form-group">
+                        <label>Osoite:</label>
+                        <input className="form-control" onChange={e => setAddress(e.target.value)}/>
+                    </div>
+                    <div className="form-group">
+                        <label>Postinumero:</label>
+                        <input className="form-control" onChange={e => setZip(e.target.value)}/>
+                    </div>
+                    <div className="form-group">
+                        <label>Postitoimipaikka:</label>
+                        <input className="form-control" onChange={e => setCity(e.target.value)}/>
+                    </div>
+                    <div className="button">
+                        <button className="btn btn-primary">Tilaa</button>
+                    </div>
+                </form>
+                </>
+                }
         </div>   
+
     <Footer />   
-        </>
+        
+    </>
     )
 }
