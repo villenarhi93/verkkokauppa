@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, {useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Cart from "./Cart";
 
 const url = 'http://localhost:3000';
@@ -22,6 +22,14 @@ useEffect(() => {
         })
 }, []
 )
+
+function executeSearch(e) {
+    if (e.charCode === 13) {
+        e.preventDefault();
+        navigate('/search/' + search);
+    }
+}
+
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
@@ -49,6 +57,16 @@ useEffect(() => {
                         </ul>
                     </li>
                 </ul>
+                <form className="form-inline">
+                    <input
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    onKeyPress={(e) => executeSearch(e)}
+                    className="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search" />
+                </form>
                 <form class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
