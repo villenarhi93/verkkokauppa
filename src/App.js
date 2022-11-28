@@ -8,7 +8,6 @@ import Home from "./pages/Home";
 import Order from './pages/Order';
 import React, {useState, useEffect } from "react";
 
-
 const URL = 'http://localhost:3000';
 
 function App() {
