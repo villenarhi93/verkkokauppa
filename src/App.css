@@ -24,3 +24,12 @@ footer li {
   .carousel-item{
     min-height: 280px;
     }
+
+#myCarousel {
+    background-color: #4C6CA1;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    background-color: #4C6CA1;
+}
+
