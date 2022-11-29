@@ -1,0 +1,22 @@
+.content {
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+footer li {
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  a.some {
+    text-decoration: none;
+    color:#000;
+  }
