@@ -20,3 +20,7 @@ footer li {
     text-decoration: none;
     color:#000;
   }
+
+  .carousel-item{
+    min-height: 280px;
+    }
