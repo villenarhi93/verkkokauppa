@@ -1,10 +1,8 @@
 import React, { useState, useEffect, createRef } from "react";
 import uuid from "react-uuid";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import axios from "axios";
 
-const url = 'http://localhost:3000';
+const url = 'http://localhost/VPP_backend/';
 
 export default function Order({cart, removeFromCart, updateAmount}) {
     const [inputs,_] = useState([]);
@@ -42,8 +40,8 @@ export default function Order({cart, removeFromCart, updateAmount}) {
         e.preventDefault();
         
         const json = JSON.stringify({
-            firstname: firstname,
-            lastname: lastname,
+            fname: firstname,
+            lname: lastname,
             address: address,
             zip: zip,
             city: city,
@@ -66,18 +64,18 @@ export default function Order({cart, removeFromCart, updateAmount}) {
     return (
     <>
 
-    <Navbar />
+    
 
         <div>
             <h3 className="header">Tuotteet ostoskorissa</h3>
             <table className="table">
                 <tbody>
                     {cart.map((product, index) => {
-                        sum+=parseFloat(product.price)
+                        sum+=parseFloat(product.hinta)
                         return (
                             <tr key={uuid()}>
-                                <td>{product.name}</td>
-                                <td>{product.price} €</td>
+                                <td>{product.nimi}</td>
+                                <td>{product.hinta} €</td>
                                 <td>
                                     <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e, product, index)} />
                                 </td>
@@ -124,7 +122,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
                 }
         </div>   
 
-    <Footer />   
+    
         
     </>
     )

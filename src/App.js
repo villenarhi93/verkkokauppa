@@ -3,12 +3,15 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cart from './components/Cart';
-import Products from './components/Products';
+import Products from './pages/Products';
+import Product from './pages/Product';
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Order from './pages/Order';
 import React, {useState, useEffect } from "react";
 
-const URL = 'http://localhost:3000';
+
+const URL = 'http://localhost/VPP_backend/';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -48,14 +51,15 @@ function App() {
 
   return (
     <>
-    <Navbar url={URL}/>
+    <Navbar url={URL} cart={cart}/>
     <Header />
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products/:categoryId" element={<Products url={URL} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart}/>} />
         <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
-        <Route path="/product/:productId" element={<Products url={URL} addToCart={addToCart}/>} />
+        <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
         <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart}/>} />
       </Routes>
     </div>
