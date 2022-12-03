@@ -3,7 +3,7 @@ import React, {useState, useEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 import Cart from "./Cart";
 
-const url="http//:localhost/VPP_backend/"
+const url="http://localhost/VPP_backend/"
 
 
 export default function Navbar({url, cart}) {
