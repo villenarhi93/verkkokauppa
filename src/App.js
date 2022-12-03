@@ -1,3 +1,4 @@
+import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -60,7 +61,7 @@ function App() {
         <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart}/>} />
         <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
         <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
-        <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart}/>} />
+        <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
       </Routes>
     </div>
     <Footer />

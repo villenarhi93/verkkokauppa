@@ -63,15 +63,12 @@ export default function Order({cart, removeFromCart, updateAmount}) {
 
     return (
     <>
-
-    
-
         <div>
             <h3 className="header">Tuotteet ostoskorissa</h3>
             <table className="table">
                 <tbody>
                     {cart.map((product, index) => {
-                        sum+=parseFloat(product.hinta)
+                        sum+=parseFloat(product.hinta*product.amount)
                         return (
                             <tr key={uuid()}>
                                 <td>{product.nimi}</td>
@@ -83,9 +80,15 @@ export default function Order({cart, removeFromCart, updateAmount}) {
                             </tr>
                         )
                     })}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                     <tr key={uuid()}>
                         <td></td>
-                        <td>{sum.toFixed(2)}</td>
+                        <td>{sum.toFixed(2)} €</td>
                         <td></td>
                     </tr>
                 </tbody>
