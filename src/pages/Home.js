@@ -143,8 +143,8 @@ export default function Home() {
                                             <div className="bi-star-fill"></div>
                                             <div className="bi-star-fill"></div>
                                             <div className="bi-star-fill"></div>
-                                            <div className="bi-star-fill"></div>
-                                            <div className="bi-star-fill"></div>
+                                            
+                                            
                                         </div>
                                         $40.00
                                     </div>

@@ -7,14 +7,6 @@ const url = 'http://localhost/VPP_backend/';
 export default function Order({cart, removeFromCart, updateAmount}) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
-    const [firstname, setFirstName] = useState('')
-    const [lastname, setLastName] = useState('')
-    const [address, setAddress] = useState('')
-    const [zip, setZip] = useState('')
-    const [city, setCity] = useState('')
-    const [finished, setFinished] = useState([])
-    const [empty, setEmpty] = useState();
-
 
     useEffect(() => {
       for (let i = 0;i<cart.length;i++) {
@@ -28,13 +20,20 @@ export default function Order({cart, removeFromCart, updateAmount}) {
       }
     }, [cart])
     
-    
-    let sum = 0;
-
     function changeAmount(e,product,index) {
-        updateAmount(e.target.value, product);
+        updateAmount(e.target.value,product);
         setInputIndex(index);
     }
+
+    let sum = 0;
+
+    const [firstname, setFirstName] = useState('')
+    const [lastname, setLastName] = useState('')
+    const [address, setAddress] = useState('')
+    const [zip, setZip] = useState('')
+    const [city, setCity] = useState('')
+    const [finished, setFinished] = useState([])
+    const [empty, setEmpty] = useState();
 
     function order(e) {
         e.preventDefault();
@@ -63,15 +62,12 @@ export default function Order({cart, removeFromCart, updateAmount}) {
 
     return (
     <>
-
-    
-
         <div>
             <h3 className="header">Tuotteet ostoskorissa</h3>
             <table className="table">
                 <tbody>
                     {cart.map((product, index) => {
-                        sum+=parseFloat(product.hinta)
+                        sum+=parseFloat(product.hinta*product.amount)
                         return (
                             <tr key={uuid()}>
                                 <td>{product.nimi}</td>
@@ -83,9 +79,16 @@ export default function Order({cart, removeFromCart, updateAmount}) {
                             </tr>
                         )
                     })}
-                    <tr key={uuid()}>
+                    <tr>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr key={uuid()}>
+                        <td>Loppusumma</td>
                         <td>{sum.toFixed(2)}</td>
+                        <td></td>
                         <td></td>
                     </tr>
                 </tbody>
