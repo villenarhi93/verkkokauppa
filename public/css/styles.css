@@ -6174,13 +6174,12 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 25%;
   padding: 0;
   color: #fff;
   text-align: center;
-  background: none;
   border: 0;
-  opacity: 0.5;
+  
   transition: opacity 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
