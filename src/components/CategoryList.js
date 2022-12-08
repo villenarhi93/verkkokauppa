@@ -27,7 +27,7 @@ export default function CategoryList({url, selectedCategory, setSelectedCategory
     return (
         <select value={selectedCategory?.id} onChange={(e) => onCategoryChange(e.target.value)}>
             {categories.map((category) => (
-                <option key={category.id} value={category.id}>{category.name}</option>
+                <option key={category.id} value={category.id}>{category.nimi}</option>
             ))}
         </select>
     )

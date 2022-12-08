@@ -3,7 +3,7 @@ import React, {useState, useEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 import Cart from "./Cart";
 
-const url="http://localhost/VPP_backend/"
+
 
 
 export default function Navbar({url, cart}) {
@@ -41,11 +41,14 @@ function executeSearch(e) {
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li className="nav-item"><a className="nav-link" aria-current="page" href="#!"></a>
+                    <li className="nav-item">
                         <Link className="nav-link" to="/">Etusivu</Link>
                     </li>
-                    <li className="nav-item"><a className="nav-link" href="#!"></a>
+                    <li className="nav-item">
                         <Link className="nav-link" to="/about">Tietoja</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/add">Ylläpito</Link>
                     </li>
                     <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">Tuotteet</a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -71,7 +74,7 @@ function executeSearch(e) {
                     aria-label="Search" />
                 </form>
                 <form className="d-flex">
-                    <button className="btn btn-outline-dark" type="submit">
+                    <button className="btn btn-outline-dark">
                         <i className="bi-cart-fill me-1"></i>
                         <Cart cart={cart} />
                         <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>

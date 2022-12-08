@@ -56,8 +56,8 @@ export default function ManageProducts({url}) {
                 <tbody>
                     {products.map((product) => (
                         <tr key={uuid}>
-                            <td>{product.name}</td>
-                            <td>{product.price} €</td>
+                            <td>{product.nimi}</td>
+                            <td>{product.hinta} €</td>
                         </tr>
                     ))}
                 </tbody>
@@ -74,7 +74,7 @@ export default function ManageProducts({url}) {
             <form onSubmit={saveProduct}>
                 <div>
                     <label>Tuotteen nimi</label>
-                    <input type="text" value={product.name} onChange={(e) => setProductName(e.target.value)}/>
+                    <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)}/>
                 </div>
                 <div>
                     <label>Tuotteen hinta</label>

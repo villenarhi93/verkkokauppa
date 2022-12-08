@@ -40,14 +40,14 @@ export default function Order({cart, removeFromCart, updateAmount}) {
         e.preventDefault();
         
         const json = JSON.stringify({
-            fname: firstname,
-            lname: lastname,
+            firstname: firstname,
+            lastname: lastname,
             address: address,
             zip: zip,
             city: city,
             cart: cart,
         });
-        axios.post(url + 'order/save.php', json, {
+        axios.post(url + 'order/save.php',json,{
             headers: {
                 'Accept': 'application/json',
                 'Content-Type' : 'application/json'
@@ -58,7 +58,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
             setFinished(true);
         }).catch(error => {
             alert(error.response === undefined ? error : error.response.data.error);
-        })
+        });
     }
 
     return (

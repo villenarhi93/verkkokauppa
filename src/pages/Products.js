@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useState,useEffect} from 'react';
-import {  useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export default function Products({url,addToCart}) {
     const [categoryName, setCategoryName] = useState('');
@@ -33,6 +33,7 @@ export default function Products({url,addToCart}) {
                                     <div className="card-body p-4">
                                         <div className="text-center"></div>
                                         <h5 className="fw-bolder">{product.nimi}</h5>
+                                        {product.hinta} €
                                         <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                             <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                                         </div>
