@@ -77,7 +77,6 @@ function executeSearch(e) {
                     <button className="btn btn-outline-dark">
                         <i className="bi-cart-fill me-1"></i>
                         <Cart cart={cart} />
-                        <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
                 </form>
             </div>

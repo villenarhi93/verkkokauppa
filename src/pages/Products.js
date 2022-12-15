@@ -21,7 +21,7 @@ export default function Products({url,addToCart}) {
 
     return (
         <div className="container">
-            <h3>Tuoteryhmän '{categoryName}' tuotteet</h3>
+            <h3>Tuoteryhmän {categoryName} tuotteet</h3>
             <section className="py-5">
                 <div className="container px-4 px-lg-5 mt-5">
                     <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"></div>
@@ -32,10 +32,10 @@ export default function Products({url,addToCart}) {
                                 <div className="card h-100">
                                     <div className="card-body p-4">
                                         <div className="text-center"></div>
-                                        <h5 className="fw-bolder">{product.nimi}</h5>
-                                        {product.hinta} €
+                                        <h4 className="fw-bolder">{product.nimi}</h4>
+                                        <h5 className="fw-bolder">{product.hinta} €</h5>
                                         <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                            <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                        <div>{product.tuotekuvaus}</div>
                                         </div>
                                         <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Lisää koriin</button>
                                     </div>

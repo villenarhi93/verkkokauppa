@@ -54,7 +54,6 @@ function App() {
   return (
     <>
     <Navbar url={URL} cart={cart}/>
-    <Header />
     <div className="container">
       <Routes>
         <Route path="/" element={<Home />} />
