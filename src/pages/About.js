@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
     
-    <h2 className="fw-bolder">Meistä</h2>
+    <h3 className="fw-bolder">Meistä</h3>
     <div>Living Tech on perustettu 2022 ja tällä hetkellä yrityksen palveluksessa on 10 työntekijää. Living Tech on tietokonekomponentti kauppa.
     <br></br> Valikoimastamme löytyy kaikki tarvitsemasi PC-komponentit oman kokoonpanosi päivittämiseen sekä uuden suunnitteluun ja toteutukseen. 
     <br></br>PC-komponenttien tarpeesi voisi olla tietokoneen peruskäyttö, pelaaminen tai työkäyttö.</div>
