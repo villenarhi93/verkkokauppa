@@ -63,7 +63,7 @@ export default function ManageProducts({url}) {
                 </tbody>
             </table>
             <div>
-                <button className="btn btn-dark" type="button" onClick={() => setAddingProduct(true)}>Lisää</button>
+                <button className="btn btn-primary" type="button" onClick={() => setAddingProduct(true)}>Lisää</button>
             </div>
             </>
         )
@@ -73,15 +73,15 @@ export default function ManageProducts({url}) {
             <h3>Lisää uusi tuote</h3>
             <form onSubmit={saveProduct}>
                 <div>
-                    <label>Tuotteen nimi</label>
+                    <label>Tuotteen nimi</label><br/>
                     <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)}/>
                 </div>
                 <div>
-                    <label>Tuotteen hinta</label>
+                    <label>Tuotteen hinta</label><br/>
                     <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}/>
                 </div>
-                <button type="button" onClick={() => setAddingProduct((false))}>Peruuta</button>
-                <button type="submit">Lisää</button>
+                <button type="button" className='btn btn-primary' onClick={() => setAddingProduct((false))}>Peruuta</button>
+                <button type="submit" className='btn btn-primary' id='add'>Lisää</button>
             </form>
             </>
         )

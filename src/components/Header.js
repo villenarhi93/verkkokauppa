@@ -7,7 +7,7 @@ export default function Header() {
             <div className="container px-4 px-lg-5 my-5">
                 <div className="text-center text-white">
                     <h1 className="display-4 fw-bolder">Living Tech</h1>
-                    <p className="lead fw-normal text-white-50 mb-0">The Best You Can Get</p>
+                    <p className="lead fw-normal text-white-50 mb-0">The Best What You Can Get</p>
                     <div className="container-lg my-3">
                         <div id="myCarousel" className="carousel carousel-dark slide" data-bs-ride="carousel">
                             <ol className="carousel-indicators">

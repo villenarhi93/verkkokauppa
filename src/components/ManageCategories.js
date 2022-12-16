@@ -1,6 +1,7 @@
 import axios from "axios";
 import CategoryList from "./CategoryList";
 import React, {useState} from "react";
+import '../App.css';
 
 export default function ManageCategories({url}) {
     const [newCategory, setNewCategory] = useState("");
@@ -34,7 +35,8 @@ export default function ManageCategories({url}) {
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
                 />
-                <button className="btn btn-dark" type="button" onClick={() => setAddingCategory(true)}>Lisää</button>
+                <br/>
+                <button className='btn btn-primary' type="button" onClick={() => setAddingCategory(true)}>Lisää</button>
             </div>
             </>
         )
@@ -44,11 +46,11 @@ export default function ManageCategories({url}) {
             <h3>Lisää uusi tuoteryhmä</h3>
             <form onSubmit={saveCategory}>
                 <div>
-                    <label>Tuoteryhmän nimi</label>
+                    <label>Tuoteryhmän nimi</label><br/>
                     <input type="text" value={newCategory} onChange={(e) => setNewCategory(e.target.value)}/>
                 </div>
-                <button type="button" onClick={() => setAddingCategory(false)}>Peruuta</button>
-                <button type="submit">Tallenna</button>
+                <button type="button" onClick={() => setAddingCategory(false)} className='btn btn-primary'>Peruuta</button>
+                <button type="submit" className='btn btn-primary' id='save'>Tallenna</button>
             </form>
             </>
         )
