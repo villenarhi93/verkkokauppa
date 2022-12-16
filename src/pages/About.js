@@ -6,12 +6,12 @@ export default function About() {
     <>
     
     <h2 className="fw-bolder">Meistä</h2>
-    <div>Living Tech on perustettu 2022 ja tällä hetkellä yrityksen palveluksessa on 4 työntekijä. Living Tech on tietokonekomponentti kauppa.
-    <br></br> Valikoistamme löytyy kaikki tarvitsemasi PC-komponentit oman kokoonpanosi päivittämiseen sekä uuden suunnitteluun ja toteutukseen. 
+    <div>Living Tech on perustettu 2022 ja tällä hetkellä yrityksen palveluksessa on 10 työntekijää. Living Tech on tietokonekomponentti kauppa.
+    <br></br> Valikoimastamme löytyy kaikki tarvitsemasi PC-komponentit oman kokoonpanosi päivittämiseen sekä uuden suunnitteluun ja toteutukseen. 
     <br></br>PC-komponenttien tarpeesi voisi olla tietokoneen peruskäyttö, pelaaminen tai työkäyttö.</div>
     <br></br>
-    <div>Kaikki toimintamme hoidetaan Helsingin tai Oulun toimipisteestämme, jossa löytyy myös huoltopiste. 
-    <br></br>Verkkokauppamme on 24/7 auki.
+    <div>Kaikki toimintamme hoidetaan Helsingin tai Oulun toimipisteestämme, joissa löytyy myös huoltopiste. 
+    <br></br>Verkkokauppamme on auki 24/7.
     </div>
           
     <div>
@@ -21,8 +21,8 @@ export default function About() {
     
               Helsinginkatu 11<br/>
               00200 Helsinki<br/> 
-              ma-la   9-21<br/>
-              su  12-19<br/>
+              ma-la 9-21<br/>
+              su 12-19<br/>
     <br></br>
          <h5 className="fw-bolder">Oulun myymälä</h5>
 
