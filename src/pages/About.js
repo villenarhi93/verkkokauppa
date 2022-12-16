@@ -16,6 +16,7 @@ export default function About() {
           
     <div>
       <br></br>
+      <br></br>
       <h4 className="fw-bolder">Asioi myymälässä</h4>
         <h5 className="fw-bolder">Helsingin myymälä</h5>
     
@@ -32,6 +33,7 @@ export default function About() {
               su 12-19<br/> 
     </div>
     <div>
+    <br></br>
     <br></br>
     <h4 className="fw-bolder">Ota yhteyttä</h4>
 
