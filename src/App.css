@@ -95,3 +95,8 @@ textarea {
 #addcart {
   margin-left: 10px;
 }
+
+.input {
+  border: 1px solid;
+  border-color: black;
+}
