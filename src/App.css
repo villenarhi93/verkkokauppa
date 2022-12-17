@@ -19,7 +19,7 @@ footer li {
 
 a.some {
   text-decoration: none;
-  color:#000;
+  color:#212529;
 }
 /* Carouselin tyylit */
 
@@ -37,7 +37,7 @@ background-color: #4C6CA1;
 
 /*Logon koko */
 .logo {
-width: 130px;
+width: 180px;
 }
 
 button {
