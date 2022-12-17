@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
-export default function Product({url}) {
+export default function Product({url, addToCart}) {
   const [product, setProduct] = useState(null);
 
   let params = useParams();
@@ -18,9 +19,15 @@ export default function Product({url}) {
   }, [params])
   
   return (
-    <div>
+    <div className="container">
       <h3>{product?.nimi}</h3>
-      <p>{product?.hinta}</p>
+      <h4>{product?.hinta} €</h4>
+      <p>{product?.tuotekuvaus}</p>
+      <button className='btn btn-outline-dark mt-auto' type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
+      
+      <span className="homespan">
+        <Link to={"/products/" + product?.kategoria_id} className="btn btn-outline-dark mt-auto">Näytä tuoteryhmä</Link>
+      </span>
     </div>
   )
 }

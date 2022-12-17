@@ -27,7 +27,7 @@ export default function Home() {
                                                 Asus, MSI
                                         </div>
                                     <span className="homespan">
-                                         <Link to="/products/1"><span className="text-center"><a className="btn btn-outline-dark mt-auto" href="">Näytä tuoteryhmä</a></span></Link>
+                                         <Link to="/products/1" className="btn btn-outline-dark mt-auto" href="">Näytä tuoteryhmä</Link>
                                     </span>
                                 </div>
                             </div>

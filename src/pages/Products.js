@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Products({url,addToCart}) {
     const [categoryName, setCategoryName] = useState('');
@@ -36,10 +37,16 @@ export default function Products({url,addToCart}) {
                                     <div className="card-body p-4">
 
                                         <div className="text-center"></div>
-                                        <h4 className="fw-bolder">{product.nimi}</h4>
-                                        <h5 className="fw-bolder">{product.hinta} €</h5>
-                                        <div>{product.tuotekuvaus}</div>
-                                        <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
+                                            <h4 className="fw-bolder">
+                                                <Link to={'/product/' + product.id}>{product.nimi}</Link>
+                                            </h4>
+                                            <h5 className="fw-bolder">{product.hinta} €</h5>
+                                        <div class="collapse" id="collapseExample">
+                                        <div class="card card-body">
+                                        </div>
+                                        </div>
+                                        
+                                        <button className="btn btn-outline-dark mt-auto" type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
 
                                     </div>
                                 </div>
