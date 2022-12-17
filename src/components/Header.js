@@ -17,17 +17,17 @@ export default function Header() {
                             </ol>
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img src="./images/pexels-pixabay-38568.jpg" className="w-50" alt="Slide 1"></img>
+                                    <img src="./images/kuva1.png" className="w-50" alt="Slide 1"></img>
                                     <div className="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="./images/pexels-pixabay-414548.jpg" className="w-50" alt="Slide 2"></img>
+                                    <img src="./images/kuva3.png" className="w-50" alt="Slide 2"></img>
                                     <div className="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="./images/pexels-roberto-nickson-3082341.jpg" className="w-50" alt="Slide 3"></img>
+                                    <img src="./images/kuva4.png" className="w-50" alt="Slide 3"></img>
                                     <div className="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
