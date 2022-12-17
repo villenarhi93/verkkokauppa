@@ -46,7 +46,8 @@ export default function Products({url,addToCart}) {
                                         </div>
                                         </div>
                                         
-                                        <button className="btn btn-outline-dark mt-auto" type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
+                                        <Link to={'/product/' + product.id}><button className="btn btn-outline-dark mt-auto" type="button">Lue lisää</button></Link>
+                                        <button className="btn btn-outline-dark mt-auto" type="button" id="addcart" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
 
                                     </div>
                                 </div>
