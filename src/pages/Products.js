@@ -38,7 +38,7 @@ export default function Products({url,addToCart}) {
 
                                         <div className="text-center"></div>
                                             <h4 className="fw-bolder">
-                                                <Link to={'/product/' + product.id}>{product.nimi}</Link>
+                                                <h4>{product.nimi}</h4>
                                             </h4>
                                             <h5 className="fw-bolder">{product.hinta} €</h5>
                                         <div class="collapse" id="collapseExample">
