@@ -20,6 +20,7 @@ export default function Products({url,addToCart}) {
     }, [params])
 
     return (
+
         <div className="container">
             
             <h3>Tuoteryhmän {categoryName} tuotteet</h3>
@@ -48,5 +49,6 @@ export default function Products({url,addToCart}) {
                 </div>
             </section>       
         </div>
+        
     )
 }

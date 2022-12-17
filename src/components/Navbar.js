@@ -72,10 +72,7 @@ function executeSearch(e) {
                     aria-label="Search" />
                 </form>
                 <form className="d-flex">
-                    <button className="btn btn-outline-dark" id="cart">
-                        <i className="bi-cart-fill me-1"></i>
-                        <Cart cart={cart} />
-                    </button>
+                    <Cart className="nav-link" to="/order" cart={cart}><button className="btn btn-outline-dark" id="cart"><i className="bi-cart-fill me-1"></i></button></Cart>
                 </form>
             </div>
         </div>

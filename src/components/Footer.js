@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css';
 
 
 export default function Footer() {
@@ -34,11 +35,10 @@ export default function Footer() {
                 <div className="col-sm-3 col-md-3 item">
                     <ul>
                         <h5>Sosiaalinen media</h5>
-                        <li className="social__link social__link--facebook"><a class="some" href="https://www.facebook.com" rel="nofollow noopener noreferrer" target="_blank" title="facebook.com Facebook"> Facebook</a></li>
-                        <li className="social__link social__link--instagram"><a class="some" href="https://www.instagram.com" rel="nofollow noopener noreferrer" target="_blank" title="instagram.com Instagram"> Instagram</a></li>
-                        <li className="social__link social__link--twitter"><a class="some" href="https://twitter.com" rel="nofollow noopener noreferrer" target="_blank" title="Twitter"> Twitter</a></li>
+                        <span><a href='https://www.facebook.com'><img src="../images/facebook.png" className='socialicons'></img></a></span>
+                        <span className='socialspan'><a href='https://www.instagram.com'><img src="../images/ig.jfif" className='socialicons'></img></a></span>
+                        <span className='socialspan'><a href='https://twitter.com'><img src="../images/twitter.png" className='socialicons'></img></a></span>
                     </ul>
-                    <div className="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
                 </div>
             </div>     
         </div>
