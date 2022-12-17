@@ -87,6 +87,8 @@ textarea {
 }
 
 .homespan {
-  display: table; margin: 0 auto;
+  display: table; 
+  margin: 0 auto;
   padding-top: 10px;
 }
+

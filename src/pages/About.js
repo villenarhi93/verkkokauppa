@@ -15,31 +15,39 @@ export default function About() {
     </div>
           
     <div>
-      <br></br>
-      <br></br>
+        <br/>
+        <br/>
       <h4 className="fw-bolder">Asioi myymälässä</h4>
-        <h5 className="fw-bolder">Helsingin myymälä</h5>
+      
+      <div>Toimipisteemme ovat auki viikon jokaisena päivänä. Myymälöissämme sinua palvelee ammattitaitoinen henkilökuntamme.</div>
+      
+        <br/>
+          <h5 className="fw-bolder">Helsingin myymälä</h5>
     
               Helsinginkatu 11<br/>
               00200 Helsinki<br/> 
               ma-la 9-21<br/>
               su 12-19<br/>
-    <br></br>
-         <h5 className="fw-bolder">Oulun myymälä</h5>
+        <br/>
+          <h5 className="fw-bolder">Oulun myymälä</h5>
 
               Oulunkatu 5<br/>
               08570 Oulu<br/> 
               ma-la 9-21<br/> 
               su 12-19<br/> 
-    </div>
+      </div>
     <div>
-    <br></br>
-    <br></br>
+    
+    <br/>
+ 
     <h4 className="fw-bolder">Ota yhteyttä</h4>
-
+      <div>Voit ottaa meihin yhteyttä soittamalla asiakaspalvelun puhelinnumeroon 0800 78594 tai laittamalla sähköpostia osoitteeseen asiakaspalvelu@livingtech.fi. 
+            Palautetta voit lähettää myös alta löytyvän lomakkeen kautta. Käsittelemme yhteydenotot saapumisjärjestyksessä.
+      </div>
+      <br/>
     <h5 className="fw-bolder">Lähetä palautetta</h5>
     <form>
-      <label>Nimi</label><br/>
+      <label>Sähköposti</label><br/>
       <input></input><br/>
       <label>Otsikko </label><br/>
       <input></input><br/>
