@@ -42,7 +42,7 @@ export default function About() {
  
     <h4 className="fw-bolder">Ota yhteyttä</h4>
       <div>Voit ottaa meihin yhteyttä soittamalla asiakaspalvelun puhelinnumeroon 0800 78594 tai laittamalla sähköpostia osoitteeseen asiakaspalvelu@livingtech.fi. 
-            Palautetta voit lähettää myös alta löytyvän lomakkeen kautta. Käsittelemme yhteydenotot saapumisjärjestyksessä.
+      <br></br>Palautetta voit lähettää myös alta löytyvän lomakkeen kautta. Käsittelemme yhteydenotot saapumisjärjestyksessä.
       </div>
       <br/>
     <h5 className="fw-bolder">Lähetä palautetta</h5>
