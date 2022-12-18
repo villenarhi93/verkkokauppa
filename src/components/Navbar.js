@@ -1,10 +1,15 @@
 import axios from "axios";
-import React, {useState, useEffect } from "react";
+import React, {useState, useEffect, createRef } from "react";
 import { Link, Navigate } from "react-router-dom";
 import Cart from "./Cart";
 import '../App.css';
+import uuid from "react-uuid";
+import Order from "../pages/Order"
 
 export default function Navbar({url, cart}) {
+<Order />
+    const [inputs,_] = useState([]);
+    const [inputIndex, setInputIndex] = useState(-1);
 
 const [categories, setCategories] = useState([]);
 const [search, setSearch] = useState('');
@@ -28,6 +33,21 @@ function executeSearch(e) {
         Navigate('/search/' + search);
     }
 }
+
+useEffect(() => {
+    for (let i = 0;i<cart.length;i++) {
+      inputs[i] = createRef();
+    }
+  }, [cart.length])
+
+  useEffect(() => {
+    if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
+      inputs[inputIndex].current.focus();
+    }
+  }, [cart])
+  
+  
+  let sum = 0;
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -71,9 +91,32 @@ function executeSearch(e) {
                     placeholder="Hae..."
                     aria-label="Search" />
                 </form>
-                <form className="d-flex">
-                    <Cart className="nav-link" to="/order" cart={cart}><button className="btn btn-outline-dark" id="cart"><i className="bi-cart-fill me-1"></i></button></Cart>
-                </form>
+                <li className="nav-item dropdown"><a className="nav-link dropdown" id="navbarDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src='./images/cart.jpg' id='cartnavbar'></img>
+                <span>{cart.length}</span></a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                            <h3 className="header">Ostoskori</h3>
+                                <table className="table">
+                                    <tbody>
+                                        {cart.map((product, index) => {
+                                            sum+=parseFloat(product.hinta*product.amount)
+                                            return (
+                                                <tr key={uuid()}>
+                                                    <td>{product.nimi}</td>
+                                                    <td>{product.hinta} €</td>
+                                                    <td>
+                                                        <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} />
+                                                    </td>
+                                                </tr>
+                                            )
+                                        })}
+                                        <Cart className="btn btn-outline-dark" id="cart" cart={cart}>Tilaamaan</Cart>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                    </li>
             </div>
         </div>
     </nav>

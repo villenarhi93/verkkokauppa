@@ -31,15 +31,13 @@ export default function Products({url,addToCart}) {
                     <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"></div>
                     {products.map(product => (
                         <div key={product.id}>
-                            <img className="card-img-top" src={product.kuva} alt="Tuotekuva" />
                             <div className="col mb-5">
                                 <div className="card h-100">
+                                <img src={"../image/" + product?.kategoria_id + "/" + product?.id + ".jpg"} className="img-card-top" alt="Tuotekuva" />
                                     <div className="card-body p-4">
 
                                         <div className="text-center"></div>
-                                            <h4 className="fw-bolder">
-                                                <h4>{product.nimi}</h4>
-                                            </h4>
+                                            <h4 className="fw-bolder">{product.nimi}</h4>
                                             <h5 className="fw-bolder">{product.hinta} €</h5>
                                         <div class="collapse" id="collapseExample">
                                         <div class="card card-body">

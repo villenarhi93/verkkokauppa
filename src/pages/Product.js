@@ -20,14 +20,16 @@ export default function Product({url, addToCart}) {
   
   return (
     <div className="container">
+      <div>
+      <Link className="btn btn-outline-dark mt-auto" type="button" to={"/products/" + product?.kategoria_id}>Palaa tuoteryhmän sivulle</Link>
+      </div>
+      <img src={"../image/" + product?.kategoria_id + "/" + product?.id + ".jpg"} className="img-card-top" alt="Tuotekuva" />
       <h3>{product?.nimi}</h3>
       <h4>{product?.hinta} €</h4>
       <p>{product?.tuotekuvaus}</p>
+      
       <button className='btn btn-outline-dark mt-auto' type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
       
-      <span className="homespan">
-        <Link to={"/products/" + product?.kategoria_id} className="btn btn-outline-dark mt-auto">Näytä tuoteryhmä</Link>
-      </span>
     </div>
   )
 }

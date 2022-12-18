@@ -19,7 +19,7 @@ export default function Home() {
                          <div className="col mb-5">
                             <div className="card h-100">
                                 <div className="badge bg-dark text-white position-absolute">Myydyimmät</div>
-                                <img class="card-img-top" src="./images/emolevy/asusprimeb550.jpg" alt="..." />
+                                <img className="card-img-top" src="./images/emolevy/asusprimeb550.jpg" alt="..." />
                                     <div className="card-body p-4"></div>
                                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                         <div className="text-center">
@@ -36,7 +36,7 @@ export default function Home() {
                         <div className="col mb-5">
                             <div className="card h-100">
                                 <div className="badge bg-dark text-white position-absolute">Arvostetuimmat</div>
-                                <img class="card-img-top" src="./images/kiintolevy/samsung1tbpro980.jpg" alt="..." />
+                                <img className="card-img-top" src="./images/kiintolevy/samsung1tbpro980.jpg" alt="..." />
                                     <div className="card-body p-4"></div>
                                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                     <div className="text-center">
@@ -44,7 +44,7 @@ export default function Home() {
                                          Kingston, Samsung
                                     </div>
                                     <span className="homespan">
-                                         <Link to="/products/2"><span className="text-center"><a className="btn btn-outline-dark mt-auto" href="">Näytä tuoteryhmä</a></span></Link>
+                                         <Link to="/products/2" className="btn btn-outline-dark mt-auto"><span className="text-center"></span>Näytä tuoteryhmä</Link>
                                     </span>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ export default function Home() {
                         <div className="col mb-5">
                             <div className="card h-100">
                                 <div className="badge bg-dark text-white position-absolute"></div>
-                                <img class="card-img-top" src="./images/muisti/kingston16gbfurybeast.jpg" alt="..." />
+                                <img className="card-img-top" src="./images/muisti/kingston16gbfurybeast.jpg" alt="..." />
                                     <div className="card-body p-4"></div>
                                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                         <div className="text-center">
@@ -61,7 +61,7 @@ export default function Home() {
                                             Corsair, GSkill, Kingston
                                         </div>
                                     <span className="homespan">
-                                         <Link to="/products/3"><span className="text-center"><a className="btn btn-outline-dark mt-auto" href="">Näytä tuoteryhmä</a></span></Link>
+                                         <Link to="/products/3" className="btn btn-outline-dark mt-auto">Näytä tuoteryhmä</Link>
                                     </span>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ export default function Home() {
                         <div className="col mb-5">
                             <div className="card h-100">
                                 <div className="badge bg-dark text-white position-absolute"></div>
-                                <img class="card-img-top" src="./images/näytönohjain/asusgeforce4090.jpg" alt="..." />
+                                <img className="card-img-top" src="./images/näytönohjain/asusgeforce4090.jpg" alt="..." />
                                     <div className="card-body p-4"></div>
                                  <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                         <div className="text-center">
@@ -78,7 +78,7 @@ export default function Home() {
                                             Asus, Gigabyte, KFA, MSI
                                         </div>
                                     <span className="homespan">
-                                         <Link to="/products/4"><span className="text-center"><a className="btn btn-outline-dark mt-auto" href="">Näytä tuoteryhmä</a></span></Link>
+                                         <Link to="/products/4" className="btn btn-outline-dark mt-auto">Näytä tuoteryhmä</Link>
                                     </span>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@ export default function Home() {
                          <div className="col mb-5">
                             <div className="card h-100">
                                 <div className="badge bg-dark text-white position-absolute"></div>
-                                <img class="card-img-top" src="./images/prosessori/amdryzen75800x3d.jpg" alt="..." />
+                                <img className="card-img-top" src="./images/prosessori/amdryzen75800x3d.jpg" alt="..." />
                                     <div className="card-body p-4"></div>
                                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                     <div className="text-center">
@@ -95,7 +95,7 @@ export default function Home() {
                                             AMD, IntelCore
                                          </div>
                                     <span className="homespan">
-                                         <Link to="/products/5"><span className="text-center"><a className="btn btn-outline-dark mt-auto" href="">Näytä tuoteryhmä</a></span></Link>
+                                         <Link to="/products/5" className="btn btn-outline-dark mt-auto">Näytä tuoteryhmä</Link>
                                     </span>
                                 </div>
                             </div>
