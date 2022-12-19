@@ -11,6 +11,7 @@ import ThankFeedback from './pages/ThankFeedback';
 import ThankOrder from './pages/ThankOrder';
 import Order from './pages/Order';
 import Add from "./pages/Add";
+import Login from './pages/Login';
 import React, {useState, useEffect } from "react";
 
 
@@ -63,6 +64,7 @@ function App() {
         <Route path="/add" element={<Add />} />
         <Route path="/thankfeedback" element={<ThankFeedback />} /> 
         <Route path="/thankorder" element={<ThankOrder />} /> 
+        <Route path="/login" element={<Login />} /> 
         <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart}/>} />
         <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
         <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />

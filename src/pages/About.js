@@ -49,11 +49,11 @@ export default function About() {
     <h5 className="fw-bolder">Lähetä palautetta</h5>
       <form>
         <label>Sähköposti</label><br/>
-        <input className="input"></input><br/>
+        <input class="form-control"></input><br/>
         <label>Otsikko </label><br/>
-        <input className="input"></input><br/>
+        <input class="form-control"></input><br/>
         <label>Palaute </label><br/>
-        <textarea rows="10" cols="50" className="input"></textarea><br/>
+        <textarea rows="10" cols="50" class="form-control"></textarea><br/>
         <Link to="/thankfeedback"><button className='btn btn-primary'>Lähetä</button></Link>    
       </form>
     </div>

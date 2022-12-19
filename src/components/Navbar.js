@@ -5,6 +5,7 @@ import Cart from "./Cart";
 import '../App.css';
 import uuid from "react-uuid";
 import Order from "../pages/Order"
+import Login from "../pages/Login";
 
 export default function Navbar({url, cart}) {
 <Order />
@@ -68,6 +69,9 @@ useEffect(() => {
                     <li className="nav-item">
                         <Link className="nav-link" to="/add">Ylläpito</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/login">Kirjaudu sisään</Link>
+                    </li>
                     <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">Tuotteet</a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                             {categories.map(category => (
@@ -96,8 +100,8 @@ useEffect(() => {
                 <span>{cart.length}</span></a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                            <h3 className="header">Ostoskori</h3>
-                                <table className="table">
+                                <h3 className="header">Ostoskori</h3>
+                                 <table className="table">
                                     <tbody>
                                         {cart.map((product, index) => {
                                             sum+=parseFloat(product.hinta*product.amount)
