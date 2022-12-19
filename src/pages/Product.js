@@ -32,7 +32,9 @@ export default function Product({url, addToCart}) {
           </div>
             <div className="col-md-6" >
               <h4 id="htuotekuvaus">Tuotekuvaus</h4>
-              <div>{product?.tuotekuvaus}</div>
+              <div>{product?.tuotekuvaus_pitka}</div>
+              <h4 className="htuote">Tekniset tiedot</h4>
+              <div>{product?.tekniset_tiedot}</div>
               <h4 className="htuote">Tuotekoodit</h4>
               <div>{product?.tuotekoodi}</div>
               <h4 className="htuote">{product?.hinta} €</h4>

@@ -39,6 +39,7 @@ export default function Products({url,addToCart}) {
 
                                         <div className="text-center"></div>
                                             <h4 className="fw-bolder">{product.nimi}</h4>
+                                            <p>{product.tuotekuvaus_lyhyt}</p>
                                             <h5 className="fw-bolder">{product.hinta} €</h5>
                                         <div class="collapse" id="collapseExample">
                                         <div class="card card-body">
