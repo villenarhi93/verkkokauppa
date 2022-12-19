@@ -12,7 +12,7 @@ export default function Login() {
         formData.append("uname", uname);
         formData.append("pw", pw);
     
-        axios.post(URL+"login.php", formData, {withCredentials: true})
+        axios.post(URL+"inc/login.php", formData, {withCredentials: true})
           .then(resp => {
             setLoggedUser(resp.data);
             setError('');
