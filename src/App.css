@@ -120,3 +120,14 @@ textarea {
 .htuote {
   margin-top: 20px;
 }
+
+::marker {
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  font-size: larger;
+  color:#212529;
+  margin-left: 8px;
+}

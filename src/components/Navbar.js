@@ -95,32 +95,36 @@ useEffect(() => {
                     placeholder="Hae..."
                     aria-label="Search" />
                 </form>
-             <li className="nav-item dropdown"><a className="nav-link dropdown" id="navbarDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src='./images/cart.jpg' id='cartnavbar'></img>
-                <span>{cart.length}</span></a>
-                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <h3 className="header">Ostoskori</h3>
-                                 <table className="table">
-                                    <tbody>
-                                        {cart.map((product, index) => {
-                                            sum+=parseFloat(product.hinta*product.amount)
-                                            return (
-                                                <tr key={uuid()}>
-                                                    <td>{product.nimi}</td>
-                                                    <td>{product.hinta} €</td>
-                                                    <td>
-                                                        <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} />
-                                                    </td>
-                                                </tr>
-                                            )
-                                        })}
-                                        <Cart className="btn btn-outline-dark" id="cart" cart={cart}>Tilaamaan</Cart>
-                                    </tbody>
-                                </table>
-                            </li>
-                        </ul>
+                <ul>
+                    <button className="btn btn-dark">
+                    <li className="nav-item dropdown"><a className="nav-link dropdown" id="navbarDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src='./images/cart.jpg' id='cartnavbar'></img>
+                        <span className="link" style={{color: '#fff'}}>{cart.length}</span></a>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <h3 className="header">Ostoskori</h3>
+                                    <table className="table">
+                                        <tbody>
+                                            {cart.map((product, index) => {
+                                                sum+=parseFloat(product.hinta*product.amount)
+                                                return (
+                                                     <tr key={uuid()}>
+                                                        <td>{product.nimi}</td>
+                                                        <td>{product.hinta} €</td>
+                                                        <td>
+                                                            <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} />
+                                                        </td>
+                                                    </tr>
+                                                )
+                                            })}
+                                            <Cart className="btn btn-outline-dark" id="cart" cart={cart}>Tilaamaan</Cart>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
                     </li>
+                    </button>
+                </ul>
             </div>
         </div>
     </nav>
