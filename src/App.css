@@ -100,3 +100,7 @@ textarea {
   border: 1px solid;
   border-color: black;
 }
+
+.productimg {
+  width: 70%;
+}

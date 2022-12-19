@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import '../App.css';
 
 export default function Products({url,addToCart}) {
     const [categoryName, setCategoryName] = useState('');
@@ -33,7 +34,7 @@ export default function Products({url,addToCart}) {
                         <div key={product.id}>
                             <div className="col mb-5">
                                 <div className="card h-100">
-                                <img src={"../image/" + product?.kategoria_id + "/" + product?.id + ".jpg"} className="img-card-top" alt="Tuotekuva" />
+                                <img src={"../image/" + product?.kategoria_id + "/" + product?.id + ".jpg"} className="productimg" alt="Tuotekuva" />
                                     <div className="card-body p-4">
 
                                         <div className="text-center"></div>
