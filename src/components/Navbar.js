@@ -91,7 +91,7 @@ useEffect(() => {
                     placeholder="Hae..."
                     aria-label="Search" />
                 </form>
-                <li className="nav-item dropdown"><a className="nav-link dropdown" id="navbarDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+             <li className=""><a className="" id="navbarDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src='./images/cart.jpg' id='cartnavbar'></img>
                 <span>{cart.length}</span></a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
