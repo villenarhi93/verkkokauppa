@@ -7,6 +7,8 @@ import Product from './pages/Product';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import ThankFeedback from './pages/ThankFeedback';
+import ThankOrder from './pages/ThankOrder';
 import Order from './pages/Order';
 import Add from "./pages/Add";
 import React, {useState, useEffect } from "react";
@@ -59,6 +61,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/add" element={<Add />} />
+        <Route path="/thankfeedback" element={<ThankFeedback />} /> 
+        <Route path="/thankorder" element={<ThankOrder />} /> 
         <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart}/>} />
         <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
         <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
