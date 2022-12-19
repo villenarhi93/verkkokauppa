@@ -104,3 +104,15 @@ textarea {
 .productimg {
   width: 70%;
 }
+
+#htuotekuvaus {
+  padding-top: 80px;
+}
+
+#hnimi {
+  padding-top: 45px;
+}
+
+.htuote {
+  margin-top: 20px;
+}

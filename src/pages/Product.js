@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import '../App.css';
 
 export default function Product({url, addToCart}) {
   const [product, setProduct] = useState(null);
@@ -19,17 +20,28 @@ export default function Product({url, addToCart}) {
   }, [params])
   
   return (
-    <div className="container">
-      <div>
-      <Link className="btn btn-outline-dark mt-auto" type="button" to={"/products/" + product?.kategoria_id}>Palaa tuoteryhmän sivulle</Link>
-      </div>
-      <img src={"../image/" + product?.kategoria_id + "/" + product?.id + ".jpg"} className="img-card-top" alt="Tuotekuva" />
-      <h3>{product?.nimi}</h3>
-      <h4>{product?.hinta} €</h4>
-      <p>{product?.tuotekuvaus}</p>
-      
-      <button className='btn btn-outline-dark mt-auto' type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
-      
+    <>
+    <div className="row">
+        <div className="col-md-6" >
+              <div>
+                <Link className="btn btn-outline-dark mt-auto" type="button" to={"/products/" + product?.kategoria_id}>Palaa tuoteryhmän sivulle</Link>
+              </div>
+              <h3 id="hnimi">{product?.nimi}</h3>
+              <img src={"../image/" + product?.kategoria_id + "/" + product?.id + ".jpg"} className="img-card-top" alt="Tuotekuva" />
+              
+          </div>
+            <div className="col-md-6" >
+              <h4 id="htuotekuvaus">Tuotekuvaus</h4>
+              <div>{product?.tuotekuvaus}</div>
+              <h4 className="htuote">Tuotekoodit</h4>
+              <div>{product?.tuotekuvaus}</div>
+              <h4 className="htuote">{product?.hinta} €</h4>
+              <button className='btn btn-outline-dark mt-auto htuote' type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
+          </div>
     </div>
+     
+     
+   </>
   )
+ 
 }
