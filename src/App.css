@@ -101,7 +101,11 @@ textarea {
   border-color: black;
 }
 
-.productimg {
+#productimg {
+  width: 100%;
+}
+
+#productsimg {
   width: 70%;
 }
 

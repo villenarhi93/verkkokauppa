@@ -34,7 +34,7 @@ export default function Products({url,addToCart}) {
                         <div key={product.id}>
                             <div className="col mb-5">
                                 <div className="card h-100">
-                                <img src={"../image/" + product?.kategoria_id + "/" + product?.id + ".jpg"} className="productimg" alt="Tuotekuva" />
+                                <img src={"../image/" + product?.kategoria_id + "/" + product?.id + ".jpg"} id="productsimg" alt="Tuotekuva" />
                                     <div className="card-body p-4">
 
                                         <div className="text-center"></div>
