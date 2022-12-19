@@ -85,7 +85,7 @@ useEffect(() => {
                     <input
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    onKeyPress={(e) => executeSearch(e)}
+                    onKeyDown={(e) => executeSearch(e)}
                     className="form-control"
                     type="search"
                     placeholder="Hae..."
