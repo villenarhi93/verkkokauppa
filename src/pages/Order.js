@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createRef } from "react";
 import uuid from "react-uuid";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const url = 'http://localhost/VPP_backend/';
 
@@ -9,6 +10,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
     const [inputIndex, setInputIndex] = useState(-1);
     const [firstname, setFirstName] = useState('')
     const [lastname, setLastName] = useState('')
+    const [email, setEmail] = useState('')
     const [address, setAddress] = useState('')
     const [zip, setZip] = useState('')
     const [city, setCity] = useState('')
@@ -42,6 +44,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
         const json = JSON.stringify({
             firstname: firstname,
             lastname: lastname,
+            email: email,
             address: address,
             zip: zip,
             city: city,
@@ -106,6 +109,10 @@ export default function Order({cart, removeFromCart, updateAmount}) {
                         <input className="form-control" onChange={e => setLastName(e.target.value)}/>
                     </div>
                     <div className="form-group">
+                        <label>Sähköposti:</label>
+                        <input className="form-control" onChange={e => setEmail(e.target.value)}/>
+                    </div>
+                    <div className="form-group">
                         <label>Osoite:</label>
                         <input className="form-control" onChange={e => setAddress(e.target.value)}/>
                     </div>
@@ -118,7 +125,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
                         <input className="form-control" onChange={e => setCity(e.target.value)}/>
                     </div>
                     <div className="button">
-                        <button className="btn btn-primary">Tilaa</button>
+                         <Link to="/thankorder"><button className='btn btn-primary'>Tilaa</button></Link>                    
                     </div>
                 </form>
                 </>
