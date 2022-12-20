@@ -96,7 +96,7 @@ useEffect(() => {
                     aria-label="Search" />
                 </form>
                 <ul>
-                    <button className="btn btn-dark">
+                    <button className="btn btn-vpp">
                     <li className="nav-item dropdown"><a className="nav-link dropdown" id="navbarDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src='./images/cart.jpg' id='cartnavbar'></img>
                         <span className="link" style={{color: '#fff'}}>{cart.length}</span></a>
