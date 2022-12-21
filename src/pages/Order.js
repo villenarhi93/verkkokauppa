@@ -3,9 +3,7 @@ import uuid from "react-uuid";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const url = 'http://localhost/VPP_backend/';
-
-export default function Order({cart, removeFromCart, updateAmount}) {
+export default function Order({url, cart, removeFromCart, updateAmount}) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
     const [firstname, setFirstName] = useState('')
@@ -14,30 +12,21 @@ export default function Order({cart, removeFromCart, updateAmount}) {
     const [address, setAddress] = useState('')
     const [zip, setZip] = useState('')
     const [city, setCity] = useState('')
-    const [finished, setFinished] = useState([])
-    const [empty, setEmpty] = useState();
+    const [finished, setFinished] = useState(false)
 
 
     useEffect(() => {
       for (let i = 0;i<cart.length;i++) {
-        inputs[i] = createRef();
+        inputs[i] = React.createRef();
       }
-    }, [cart.length])
+    }, [cart.length,inputs])
 
     useEffect(() => {
       if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
         inputs[inputIndex].current.focus();
       }
-    }, [cart])
+    }, [cart,inputs,inputIndex])
     
-    
-    let sum = 0;
-
-    function changeAmount(e,product,index) {
-        updateAmount(e.target.value, product);
-        setInputIndex(index);
-    }
-
     function order(e) {
         e.preventDefault();
         
@@ -57,15 +46,21 @@ export default function Order({cart, removeFromCart, updateAmount}) {
             }
         })
         .then(() => {
-            empty();
             setFinished(true);
         }).catch(error => {
             alert(error.response === undefined ? error : error.response.data.error);
         });
     }
 
+    function changeAmount(e,product,index) {
+        updateAmount(e.target.value, product);
+        setInputIndex(index);
+    }
+
+    let sum = 0;
+
+    if (finished === false) { 
     return (
-    <>
         <div>
             <h3 className="header">Tuotteet ostoskorissa</h3>
             <table className="table">
@@ -125,15 +120,14 @@ export default function Order({cart, removeFromCart, updateAmount}) {
                         <input className="form-control" onChange={e => setCity(e.target.value)}/>
                     </div>
                     <div className="button">
-                         <Link to="/thankorder"><button className='btn btn-primary'>Tilaa</button></Link>                    
+                         <button className='btn btn-primary'>Tilaa</button>                   
                     </div>
                 </form>
                 </>
                 }
-        </div>   
-
-    
-        
-    </>
-    )
+        </div>
+        )
+    } else {
+        return (<h3>Kiitos tilauksestasi!</h3>);
+    }
 }
